@@ -5,7 +5,7 @@
 ## **Environment installation**
 >**mindspore 1.9.0\
 >cuda 10.1\
->conda** (could be installed as follow)
+>conda** (can be installed as follow)
 
     conda env create -f environment.yml
 ## **Run SCAHN**
