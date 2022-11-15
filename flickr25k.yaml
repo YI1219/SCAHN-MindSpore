@@ -24,7 +24,7 @@ log_file: 'log/'
 # flickr dataset attributes
 num_label: 24
 anno_file: 'path_to_your_dataset/f25k/annotations/f25k_v2.json'
-image_path: '/home/yuyang/works/data/f25k/f25k_img'
+image_path: 'path_to_your_dataset/f25k/f25k_img'
 seq_len: 128
 bert_pretrain: 'bert-base-uncased'
 img_size: 224
