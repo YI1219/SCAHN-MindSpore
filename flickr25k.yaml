@@ -23,19 +23,19 @@ log_file: 'log/'
 
 # flickr dataset attributes
 num_label: 24
-anno_file: '/home/yuyang/works/data/f25k/annotations/f25k_v2.json'
+anno_file: 'path_to_your_dataset/f25k/annotations/f25k_v2.json'
 image_path: '/home/yuyang/works/data/f25k/f25k_img'
 seq_len: 128
 bert_pretrain: 'bert-base-uncased'
 img_size: 224
 img_seq: 36 # img_seq = 196 if use_raw_img = True else 36
 use_raw_img: False # change img_seq and img_emb_dim meanwhile
-buf_feat: /home/yuyang/works/data/f25k/bu_att
-buf_box: /home/yuyang/works/data/f25k/bu_box
+buf_feat: 'path_to_your_dataset/f25k/bu_att'
+buf_box: 'path_to_your_dataset/f25k/bu_box'
 
 # gcn attributes
-adj_path: '/home/yuyang/works/data/f25k/gcn/adj_file.pkl'
-inp_path: '/home/yuyang/works/data/f25k/gcn/label_w2v.6B.300d.npy'
+adj_path: 'path_to_your_dataset/f25k/gcn/adj_file.pkl'
+inp_path: 'path_to_your_dataset/f25k/gcn/label_w2v.6B.300d.npy'
 gcn_input_dim: 300
 gcn_hidden: 256
 gcn_dropout: 
