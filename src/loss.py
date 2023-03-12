@@ -213,7 +213,7 @@ class TripletLoss(nn.Cell):
         source = source.expand_dims(1)
         denominator = sqrt(source.pow(2).sum(-1)) * sqrt(target.pow(2).sum(-1))
         cos_sim = (source * target).sum(-1) / clip(denominator, Tensor(1e-8), denominator.max())
-        distances = clip(1 - cos_sim, Tensor(0), cos_sim.max())
+        distances = clip(1 - cos_sim, Tensor(0), (1 - cos_sim).max())
         return distances
 
 
