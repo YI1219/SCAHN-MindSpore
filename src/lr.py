@@ -20,6 +20,8 @@ class SelfMadeDynamicLR(LearningRateSchedule):
     def construct(self, global_step):
         p = self.cast(global_step, mstype.float32)
         if self.is_stair:
-            p = P.FloorDiv()(p, self.decay_steps) * self.decay_steps
+            p = P.FloorDiv()(p, self.decay_steps)
+        else:
+            p = p / self.decay_steps
         warmup_percent = self.cast(self.min(global_step, self.warmup_steps), mstype.float32) / self.warmup_steps
         return self.learning_rate * self.pow(self.math_e, -self.decay_rate * p) * warmup_percent
