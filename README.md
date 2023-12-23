@@ -14,10 +14,15 @@
 ## **Config file**
 ### **Types of SCAHN**
 Different types of SCAHN selections are:
-|Loss function|Image encoder|
-|---|---|
-|paco loss|vision transformer|
-|triplet loss|faster-RCNN + trasnformers|
+|Loss function|
+|---|
+|paco loss|
+|triplet loss|
+
+|Image encoder|
+|---|
+|vision transformer|
+|faster-RCNN + trasnformers|
 
 Change variables loss_type and use_raw_img(True for VIT, False for faster-RCNN + transformers) in config file to change loss function and image encoder.\
 If use faster-RCNN + transformers as image encoder, please provide image features and image boxes extracted by faster-RCNN, cause there's no implementation of faster-RCNN in this code.\
